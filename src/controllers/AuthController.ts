@@ -16,7 +16,6 @@ import { RoleService } from "../services/RoleService";
 import { RoleType } from "../enums/RoleType";
 import { LoginRequestDto } from "../dto/request/LoginRequestDto";
 
-
 /**
  * AuthController
  */

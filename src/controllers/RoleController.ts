@@ -13,7 +13,6 @@ import { PermissionService } from "../services/PermissionService";
 import { DtoProperty } from "../enums/DtoProperty";
 import Permission from "../entities/Permission";
 
-
 /**
  * RoleController
  */

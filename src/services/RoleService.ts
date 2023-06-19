@@ -5,7 +5,6 @@ import Role from "../entities/Role";
 import { RoleNotFoundException } from "../exceptions/RoleNotFoundException";
 import { RoleType } from "../enums/RoleType";
 
-
 /**
  * Role service
  */

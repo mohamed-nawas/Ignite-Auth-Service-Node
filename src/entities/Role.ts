@@ -61,6 +61,18 @@ class Role {
             return this.permissions;
         throw new Error(`No such entity property as ${property.toString()} exists in Role`);
     }
+
+    public setProperty(property: EntityProperty, value: any): void {
+        if (property === EntityProperty.ID && typeof value === 'string') {
+            this.id = value;
+            return;
+        }
+        if (property === EntityProperty.PERMISSIONS && Array.isArray(value) && value.every(e => e instanceof Permission)) {
+            this.permissions = value;
+            return;
+        }
+        throw new Error(`Set property on Role for given args combination don't match`);
+    }
 }
 
 export default Role;

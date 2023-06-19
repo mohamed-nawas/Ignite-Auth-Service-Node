@@ -80,6 +80,18 @@ class User {
         throw new Error(`No such entity property as ${property.toString()} exists in User`);
     }
 
+    public setProperty(property: EntityProperty, value: any): void {
+        if (property === EntityProperty.ID && typeof value === 'string') {
+            this.id = value;
+            return;
+        }
+        if (property === EntityProperty.ROLES && Array.isArray(value) && value.every(e => e instanceof Role)) {
+            this.roles = value;
+            return;
+        }
+        throw new Error(`Set property on Role for given args combination don't match`);
+    }
+
     public setPassword(password: string): void {
         this.password = password;
     }

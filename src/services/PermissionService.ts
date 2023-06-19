@@ -4,7 +4,6 @@ import { PermissionRepository } from "../repository/PermissionRepository";
 import Permission from "../entities/Permission";
 import { PermissionNotFoundException } from "../exceptions/PermissionNotFoundException";
 
-
 /**
  * Permission service
  */

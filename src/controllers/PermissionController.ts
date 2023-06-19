@@ -10,7 +10,6 @@ import { getErrorResponseWrapper, getSuccessResponseWrapper } from "./Controller
 import PermissionResponseDto from "../dto/response/PermissionResponseDto";
 import Permission from "../entities/Permission";
 
-
 /**
  * PermissionController
  */

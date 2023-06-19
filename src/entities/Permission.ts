@@ -40,6 +40,14 @@ class Permission {
             return this.permission;
         throw new Error(`No such entity property as ${property.toString()} exists in Permission`);
     }
+
+    public setProperty(property: EntityProperty, value: any): void {
+        if (property === EntityProperty.ID && typeof value === 'string') {
+            this.id = value;
+            return;
+        }
+        throw new Error(`Set property on Permission for given args combination don't match`);
+    }
 }
 
 export default Permission;

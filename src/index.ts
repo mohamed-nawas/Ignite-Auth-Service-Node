@@ -2,6 +2,7 @@ import "reflect-metadata";
 import express, { Application } from "express";
 import { PORT } from "./utils/constants";
 const expressApp = require('./express-app');
+// const dbSeeder = require('./db-seeder');
 
 const StartServer = async() => {
 
@@ -9,6 +10,8 @@ const StartServer = async() => {
     const app: Application = express();
     
     await expressApp(app);
+    // commandline runner
+    // await dbSeeder();
 
     // listen to the application server on PORT
     app.listen(PORT, (): void => {
