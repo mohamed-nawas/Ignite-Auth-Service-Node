@@ -47,7 +47,7 @@ src/utils/postman_collection.json
 ## Coverage Report
 
 ```
-
+coverage/lcov-report/index.html
 ```
 
 ### Reference Documentation
